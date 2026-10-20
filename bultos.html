@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bultos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    
+    <header>
+        
+        <nav class="navbar">
+            <ul>
+                <li><a href="oracion.html">ARTÍCULOS DE ORACIÓN</a></li>
+                <li><a href="religiosos.html">ARTÍCULOS RELIGIOSOS</a></li>
+                <li><a href="velas.html">VELAS Y CIRIOS</a></li>
+                <li><a href="sacramentos.html">JUEGOS DE SACRAMENTOS</a></li>
+                <li><a href="decoracion.html">DECORACIÓN RELIGIOSA</a></li>
+                <li><a href="bultos.html">BULTOS</a></li>
+                <li><a href="index.html">SALIR</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+
+    <main>
+        <center>
+            
+            <div class="flotante">
+                <strong>CATALÓGO</strong>
+            </div>
+            <br>
+
+            <div class="neon">
+                FIGURAS EN BULTO
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/resina.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">BULTOS DE RESINA</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$90.00</strong></center>
+                <br>
+                <center>Representaciones devocionales fabricadas mediante el vaciado de resina sintética.</center>
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Bulto de resina')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/barro.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">BULTOS DE BARRO</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$90.00</strong></center>
+                <br>
+                <center>Esculturas tridimensionales elaboradas artesanalmente con arcilla cocida, que representan a distintas advocaciones de la fe católica.</center>
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Bulto de barro')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="carrito">
+                <h2>CARRITO DE COMPRAS</h2>
+            <div class="contador"><strong>Productos en el carrito:</strong> <span id="cantidad">0</span></div>
+            <ul id="listaCarrito"></ul>
+            </div>
+
+            <script>
+                let cantidad = 0;
+                const listaCarrito = document.getElementById("listaCarrito");
+                const cantidadSpan = document.getElementById("cantidad");
+
+                function agregarAlCarrito(producto) {
+                                                        cantidad++;
+                                                        cantidadSpan.textContent = cantidad;
+
+                                                        const li = document.createElement("li");
+                                                        li.textContent = producto;
+                                                        listaCarrito.appendChild(li);
+                                                    }
+            </script>
+
+        </center>
+    </main>
+
+</body>
+</html>

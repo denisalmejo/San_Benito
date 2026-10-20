@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velas y Cirios</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    
+    <header>
+        
+        <nav class="navbar">
+            <ul>
+                <li><a href="oracion.html">ARTÍCULOS DE ORACIÓN</a></li>
+                <li><a href="religiosos.html">ARTÍCULOS RELIGIOSOS</a></li>
+                <li><a href="velas.html">VELAS Y CIRIOS</a></li>
+                <li><a href="sacramentos.html">JUEGOS DE SACRAMENTOS</a></li>
+                <li><a href="decoracion.html">DECORACIÓN RELIGIOSA</a></li>
+                <li><a href="bultos.html">BULTOS</a></li>
+                <li><a href="index.html">SALIR</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <br>
+
+    <main>
+        <center>
+            
+            <div class="flotante">
+                <strong>CATALÓGO</strong>
+            </div>
+            <br>
+
+            <div class="neon">
+                VELAS Y CIRIOS
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/veladoras.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">VELAS</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$45.00</strong></center>
+                <br>
+                <center>Representan principalmente a Jesucristo como la "Luz del mundo" que vence a la oscuridad.</center>
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Vela')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/cirios.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">CIRIOS PASCUALES</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$90.00</strong></center>
+                <br>
+                <center>Vela de gran tamaño que se bendice y enciende durante la Vigilia Pascual en la noche del Sábado Santo, como símbolo de Cristo resucitado y su luz que vence a las tinieblas.</center>
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Cirio Pascual')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="carrito">
+                <h2>CARRITO DE COMPRAS</h2>
+            <div class="contador"><strong>Productos en el carrito:</strong> <span id="cantidad">0</span></div>
+            <ul id="listaCarrito"></ul>
+            </div>
+
+            <script>
+                let cantidad = 0;
+                const listaCarrito = document.getElementById("listaCarrito");
+                const cantidadSpan = document.getElementById("cantidad");
+
+                function agregarAlCarrito(producto) {
+                                                        cantidad++;
+                                                        cantidadSpan.textContent = cantidad;
+
+                                                        const li = document.createElement("li");
+                                                        li.textContent = producto;
+                                                        listaCarrito.appendChild(li);
+                                                    }
+            </script>
+
+        </center>
+    </main>
+
+</body>
+</html>

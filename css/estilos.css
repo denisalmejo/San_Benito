@@ -1,0 +1,155 @@
+body{
+        font-family: 'Segoe UI', sans-serif;
+        text-align: center;
+        background-color: beige;
+        margin: 0;
+        padding: 0;
+    }
+
+h1  {
+        background-color: #77543d;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+.navbar {
+            background-color: #C6A15B; 
+            padding: 0.5em 0;
+        }
+
+.navbar ul  {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex; 
+                justify-content: center;
+            }
+
+.navbar li  {
+                margin: 0 15px;
+            }
+
+.navbar a   {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                padding: 10px 15px;
+                transition: background-color 0.3s ease;
+                border-radius: 5px;
+            }
+
+.navbar a:hover {
+                    background-color: #F3E9D7; 
+                    color: black;
+                }
+
+.card   {
+            max-width: 200px;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+.card:hover {
+                transform: scale(1.03);
+            }
+
+.card img   {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+.card-content   {
+                    padding: 10px;
+                }
+
+.card-title {
+                font-size: 1.5em;
+                color: #2e8b57;
+                margin-bottom: 05px;
+                text-align: center;
+            }
+
+.card-description   {
+                        font-size: 1em;
+                        color: #333;
+                        text-align: justify;
+                    }
+
+.carrito   {
+                margin-top: 30px;
+                padding: 10px;
+                background-color: #eafbea;
+                border-radius: 10px;
+                max-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            }
+
+.carrito h2 {
+                color: #2e8b57;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+
+.carrito ul {
+                list-style: none;
+                padding: 0;
+            }
+
+.carrito li {
+                padding: 5px;
+                border-bottom: 1px solid #ccc;
+                color: #333;
+            }
+
+.boton  {
+            background-color: #2e8b57;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+.zoom-hover {
+                font-size:x-large;
+                transition: transform 0.3s ease;
+            }
+
+.neon   {
+            font-size:xx-large;
+            color: #FFA500;
+            text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFD700;
+        }
+
+.flotante   {
+                font-size:xx-large;
+                animation: flotar 2s ease-in-out infinite;
+            }
+@keyframes flotar   {
+                        0%, 100% { transform: translateY(0); }
+                        50% { transform: translateY(-5px); }
+                    }
+
+.maquina{
+            font-size:x-large;
+            font-family: 'Courier New', monospace;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid;
+            animation: escribir 4s steps(30) infinite;
+        }
+        
+@keyframes escribir {
+                        from { width: 0; }
+                        to { width: 100%; }
+                    }
+

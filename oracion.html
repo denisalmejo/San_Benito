@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículos de oración</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    
+    <header>
+        
+        <nav class="navbar">
+            <ul>
+                <li><a href="oracion.html">ARTÍCULOS DE ORACIÓN</a></li>
+                <li><a href="religiosos.html">ARTÍCULOS RELIGIOSOS</a></li>
+                <li><a href="velas.html">VELAS Y CIRIOS</a></li>
+                <li><a href="sacramentos.html">JUEGOS DE SACRAMENTOS</a></li>
+                <li><a href="decoracion.html">DECORACIÓN RELIGIOSA</a></li>
+                <li><a href="bultos.html">BULTOS</a></li>
+                <li><a href="index.html">SALIR</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <br>
+
+    <main>
+        <center>
+            
+            <div class="flotante">
+                <strong>CATALÓGO</strong>
+            </div>
+            <br>
+
+            <div class="neon">
+                ARTÍCULOS DE ORACIÓN
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/biblia.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">BIBLIAS</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$250.00</strong></center>
+                <br>
+                <center>Recopilación de textos sagrados que funciona como una biblioteca de libros de diversos géneros literarios, históricos, poéticos y proféticos, considerada por los creyentes como la palabra o inspiración de Dios.</center>
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Biblia')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/libritos.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">LIBRITOS DE ORACIÓN</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$6.00</strong></center>
+                <br>
+                <center>Pequeños devocionarios o folletos de bolsillo con contenido espiritual, católico o cristiano.</center>
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Librito de oración')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/novenas.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">NOVENAS</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$10.00</strong></center>
+                <br>
+                <center>Herramientas devocionales de oración católica estructuradas para rezarse durante nueve días seguidos, con el fin de pedir una gracia, prepararse para una fiesta litúrgica o solicitar la intercesión de un santo.</center>
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Novena')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/rosario.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">ROSARIOS</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$25.00</strong></center>
+                <br>
+                <center>Objeto material (un collar de cuentas, cordón anudado o sarta) que sirve como herramienta espiritual o de conteo para guiar la oración apartir de los misterios.</center>
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Rosario')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="carrito">
+                <h2>CARRITO DE COMPRAS</h2>
+            <div class="contador"><strong>Productos en el carrito:</strong> <span id="cantidad">0</span></div>
+            <ul id="listaCarrito"></ul>
+            </div>
+
+            <script>
+                let cantidad = 0;
+                const listaCarrito = document.getElementById("listaCarrito");
+                const cantidadSpan = document.getElementById("cantidad");
+
+                function agregarAlCarrito(producto) {
+                                                        cantidad++;
+                                                        cantidadSpan.textContent = cantidad;
+
+                                                        const li = document.createElement("li");
+                                                        li.textContent = producto;
+                                                        listaCarrito.appendChild(li);
+                                                    }
+            </script>
+
+        </center>
+    </main>
+
+</body>
+</html>

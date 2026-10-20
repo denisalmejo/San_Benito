@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoración religiosa</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    
+    <header>
+        
+        <nav class="navbar">
+            <ul>
+                <li><a href="oracion.html">ARTÍCULOS DE ORACIÓN</a></li>
+                <li><a href="religiosos.html">ARTÍCULOS RELIGIOSOS</a></li>
+                <li><a href="velas.html">VELAS Y CIRIOS</a></li>
+                <li><a href="sacramentos.html">JUEGOS DE SACRAMENTOS</a></li>
+                <li><a href="decoracion.html">DECORACIÓN RELIGIOSA</a></li>
+                <li><a href="bultos.html">BULTOS</a></li>
+                <li><a href="index.html">SALIR</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <center>
+            
+            <div class="flotante">
+                <strong>CATALÓGO</strong>
+            </div>
+            <br>
+
+            <div class="neon">
+                DECORACIÓN
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/cuadro.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">CUADROS RELIGIOSOS PARA PARED</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$450.00</strong></center>
+                <br>
+                <center>Obras pictóricas o visuales cuyo tema central representa la fe, la espiritualidad, personajes sagrados o pasajes bíblicos.</center>
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Cuadro para pared')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/madera.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">CRUCES DE MADERA PARA PARED</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$390.00</strong></center>
+                <br>
+                <center>Elementos decorativos y devocionales que combinan la calidez del material natural con un significado espiritual o estético para el hogar.</center>
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Cruz de madera para pared')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="carrito">
+                <h2>CARRITO DE COMPRAS</h2>
+            <div class="contador"><strong>Productos en el carrito:</strong> <span id="cantidad">0</span></div>
+            <ul id="listaCarrito"></ul>
+            </div>
+
+            <script>
+                let cantidad = 0;
+                const listaCarrito = document.getElementById("listaCarrito");
+                const cantidadSpan = document.getElementById("cantidad");
+
+                function agregarAlCarrito(producto) {
+                                                        cantidad++;
+                                                        cantidadSpan.textContent = cantidad;
+
+                                                        const li = document.createElement("li");
+                                                        li.textContent = producto;
+                                                        listaCarrito.appendChild(li);
+                                                    }
+            </script>
+
+        </center>
+    </main>
+
+</body>
+</html>
